@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ta_caro/models/user.dart';
+import 'package:ta_caro/screens/Feed.dart';
+import 'package:ta_caro/screens/profile.dart';
 import 'screens/create_account.dart';
 import 'screens/login.dart';
 import 'screens/splash.dart';
@@ -20,13 +22,13 @@ class AppWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Race #1',
       theme: ThemeData(primarySwatch: Colors.green),
-      initialRoute: '/splash',
+      initialRoute: '/home',
       routes: {
         '/splash': (context) => SplashPage(),
         '/login': (context) => LoginPage(),
         '/login/create-account': (context) => CreateAccount(),
-        '/home': (context) => Home(
-              user: ModalRoute.of(context)!.settings.arguments as UserModel,
+        '/home': (context) => Home(pages: [Feed(), Profile()]
+            //user: ModalRoute.of(context)!.settings.arguments as UserModel,
             ),
       },
     );
