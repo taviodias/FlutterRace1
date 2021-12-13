@@ -10,7 +10,7 @@
             "type": "dart",
             "args": [
                 "--dart-define","SUPABASEURL=https://mdjxuvodpbvupzdyroji.supabase.co",
-                "--dart-define","SUPABASEKEY="MinhaChaveSuperSecreta",
+                "--dart-define","SUPABASEKEY=MinhaChave",
             ]
         },
         {

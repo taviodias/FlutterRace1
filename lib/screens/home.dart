@@ -7,13 +7,10 @@ import 'package:ta_caro/screens/create_bottomsheet.dart';
 import 'package:ta_caro/screens/feed.dart';
 
 class Home extends StatefulWidget {
-  //final UserModel user;
+  final UserModel user;
   final List<Widget> pages;
-  const Home({
-    Key? key,
-    required this.pages,
-    /* required this.user */
-  }) : super(key: key);
+  const Home({Key? key, required this.pages, required this.user})
+      : super(key: key);
 
   @override
   State<Home> createState() => _HomeState();
